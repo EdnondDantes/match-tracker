@@ -2,10 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './app/App';
 import './app/styles.css';
+import "@fontsource/inter/600.css"; 
+
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
    //В dev mode вызывает 2 рендер
   <React.StrictMode>
       <App />
-  </React.StrictMode>
+   </React.StrictMode>
 );
