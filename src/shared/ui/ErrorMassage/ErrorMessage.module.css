@@ -1,0 +1,16 @@
+.container {
+   background-color: #0F1318 ;
+   color: #ffffff;
+   padding: 17px 25px;
+   text-align: center;
+   border-radius: 5px;
+ }
+ 
+
+ .errorIcon {
+   width: 24px;
+   height: 24px;
+   margin-right: 10px;
+   vertical-align: middle;
+   margin-bottom: 5px;
+ }

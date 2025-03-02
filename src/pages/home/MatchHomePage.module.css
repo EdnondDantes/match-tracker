@@ -1,0 +1,65 @@
+.container {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   max-width: 1920px;
+   margin: 0 auto;
+   padding: 22px;
+ }
+ 
+ .header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 32px;
+ }
+
+ .buttonContainer {
+   display: flex;
+   gap: 10px;
+ }
+
+ .matchCard {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 15px;
+   background-color: #161616;
+   border-radius: 8px;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+ }
+ 
+ .team {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 5px;
+ }
+ 
+ .teamLogo {
+   width: 40px;
+   height: 40px;
+   object-fit: contain;
+ }
+ 
+ .matchInfo {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 5px;
+ }
+ 
+ .score {
+   font-size: 18px;
+   font-weight: bold;
+ }
+ 
+ .status {
+   padding: 5px 10px;
+   border-radius: 4px;
+   font-weight: bold;
+   text-transform: uppercase;
+ }
+ 
+
+ 

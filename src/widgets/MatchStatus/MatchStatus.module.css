@@ -1,0 +1,23 @@
+.matchStatus {
+   display: inline-block;
+   padding: 5px 10px;
+   border-radius: 6px;
+   font-weight: bold;
+   font-size: 14px;
+   color: white;
+   text-align: center;
+   min-width: 100px;
+ }
+ 
+ .live {
+   background-color: #28a745;
+ }
+ 
+ .finished {
+   background-color: #dc3545;
+ }
+ 
+ .preparing {
+   background-color: #ff9800;
+ }
+ 

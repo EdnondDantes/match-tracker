@@ -1,5 +1,4 @@
-// entities/match/types.ts
-export type MatchStatus = 'Scheduled' | 'Ongoing' | 'Finished';
+export type MatchStatusType = 'Scheduled' | 'Ongoing' | 'Finished';
 
 export interface Match {
   time: string;
@@ -8,7 +7,7 @@ export interface Match {
   awayTeam: Team;
   homeScore: number;
   awayScore: number;
-  status: MatchStatus;
+  status: MatchStatusType;
 }
 
 export interface Team {

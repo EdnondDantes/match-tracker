@@ -3,9 +3,9 @@ import styles from './MatchHomePage.module.css';
 import { fetchMatches } from '@/shared/api/api';
 import { Match } from '@/entities/Match/model';
 import { RefreshButton } from '@/features/RefreshMatches/RefreshButton';
-import { LoadingIndicator } from '@/shared/ui/LoadingIndicator/LoadingIndicator';
 import { ErrorMessage } from '@/shared/ui/ErrorMassage/ErrorMassage';
 import { MatchList } from '@/widgets/MatchList/MatchList';
+import { LoadingPlaceholder } from '@/shared/ui/LoadingPlaceholder/LoadingPlaceholder';
 
 export const MatchHomePage = () => {
   const [matches, setMatches] = useState<Match[]>([]);
@@ -30,15 +30,16 @@ export const MatchHomePage = () => {
   }, []);
 
   return (
-    <div className="container">
-      <div className="header">
-        <h1>Матч-трекер</h1>
-        <RefreshButton onClick={loadData} />
+    <div className={styles.container}>
+      <div className={styles.header}>
+        <h1>Match Tracker</h1>
+        <div className={styles.buttonContainer}>
+          {error && <ErrorMessage />}
+          <RefreshButton loading={loading} setLoading={setLoading} onClick={loadData} />
+        </div>
       </div>
       
-      {loading && <LoadingIndicator />}
-      
-      {error && <ErrorMessage />}
+      {loading && <LoadingPlaceholder />}
       
       {!loading && !error && <MatchList matches={matches} />}
     </div>
