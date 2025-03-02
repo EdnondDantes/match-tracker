@@ -11,9 +11,13 @@ export const MatchHomePage = () => {
   const [matches, setMatches] = useState<Match[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [isFirstLoad, setIsFirstLoad] = useState(true);
+
+  
 
   const loadData = async () => {
     try {
+      if (!isFirstLoad) setLoading(true)
       setLoading(true);
       setError(false);
       const data = await fetchMatches();
@@ -22,6 +26,7 @@ export const MatchHomePage = () => {
       setError(true);
     } finally {
       setLoading(false);
+      setIsFirstLoad(false);
     }
   };
 
@@ -35,7 +40,13 @@ export const MatchHomePage = () => {
         <h1>Match Tracker</h1>
         <div className={styles.buttonContainer}>
           {error && <ErrorMessage />}
-          <RefreshButton loading={loading} setLoading={setLoading} onClick={loadData} />
+          <RefreshButton 
+            loading={loading} 
+            isFirstLoad={isFirstLoad} 
+            setLoading={setLoading} 
+            onClick={loadData} 
+            />
+
         </div>
       </div>
       

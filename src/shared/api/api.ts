@@ -1,4 +1,4 @@
-// shared/api/api.ts
+
 import axios from 'axios';
 
 const API_BASE_URL = 'https://app.ftoyd.com/fronttemp-service';
